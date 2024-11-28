@@ -1,50 +1,28 @@
-# React + TypeScript + Vite
+# Drag-and-Drop Form Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple drag-and-drop form builder built with React, TypeScript, and Tailwind CSS. This application allows users to drag form elements such as `input`, `textarea`, `radio`, and `select` onto a canvas and customize the form.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Drag-and-drop functionality for form components.
+- Real-time form field rendering (input fields, radio buttons, textareas, select dropdowns).
+- Form submission with validation (using `react-hook-form` and `zod`).
+- Integration of drag-and-drop with `react-dnd` library.
+- Tailwind CSS styling for a responsive and modern UI.
 
-## Expanding the ESLint configuration
+## Demo
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+You can view the drag-and-drop form builder in action here (insert link if you have a live demo).
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+To get started, follow these steps:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Prerequisites
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Make sure you have Node.js installed. You can check if Node.js is installed by running:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+node -v
+npm -v
 ```
